@@ -141,20 +141,26 @@ const Index = () => {
 
     const columns = [
       {
+        title: "Point",
+        dataIndex: "key",
+        width: "25%",
+        render: (text: string) => <p style={{ margin: 0 }}>A{text}</p>,
+      },
+      {
         title: "X",
         dataIndex: "x",
-        // width: "25%",
+        width: "25%",
         editable: true,
       },
       {
         title: "Y",
         dataIndex: "y",
-        // width: "15%",
+        width: "25%",
         editable: true,
       },
 
       {
-        title: "operation",
+        title: "Modifier",
         dataIndex: "operation",
         render: (_: any, record: IRow) => {
           const editable = isEditing(record);
@@ -168,7 +174,7 @@ const Index = () => {
                 Save
               </a>
               <Popconfirm title="Sure to cancel?" onConfirm={cancel}>
-                <a>Cancel</a>
+                <a>Annuler</a>
               </Popconfirm>
             </span>
           ) : (
@@ -176,7 +182,7 @@ const Index = () => {
               disabled={editingKey !== ""}
               onClick={() => edit(record)}
             >
-              Edit
+              Modifier
             </Typography.Link>
           );
         },
@@ -268,6 +274,19 @@ const Index = () => {
   };
   return (
     <>
+      <h3
+        style={{
+          textAlign: "center",
+          padding: "20px 0",
+          backgroundColor: "#282c34",
+          margin: 0,
+          color: "white",
+          fontWeight: "bold",
+          fontSize: 24,
+        }}
+      >
+        Développer par Oucif Abdelkarim et Belaabed Miloud et Belouaar Maissa
+      </h3>
       <div className="main-container">
         <Row gutter={24}>
           <Col span={12} style={{ marginBottom: "20px" }}>
@@ -312,7 +331,7 @@ const Index = () => {
               </div>
               <div className="result">
                 <Input.TextArea
-                  style={{ height: "527px" }}
+                  style={{ height: "545px" }}
                   value={resultValue}
                 />
               </div>
