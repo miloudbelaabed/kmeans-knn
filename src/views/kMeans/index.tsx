@@ -114,6 +114,11 @@ const Index = () => {
     const cancel = () => {
       setEditingKey("");
     };
+    const cancel2 = (p: number, _: number) => {
+      setEditingKey("");
+      console.log(p);
+      setPaginationNumber(p);
+    };
 
     const save = async (key: React.Key) => {
       try {
@@ -221,7 +226,8 @@ const Index = () => {
           columns={mergedColumns}
           rowClassName="editable-row"
           pagination={{
-            onChange: cancel,
+            onChange: cancel2,
+
             defaultCurrent: paginationNumber,
           }}
         />
@@ -229,6 +235,7 @@ const Index = () => {
     );
   };
   const handleAdd = () => {
+    alert("test");
     const newData: IRow = {
       key: data.length + 1,
       x: 0,
