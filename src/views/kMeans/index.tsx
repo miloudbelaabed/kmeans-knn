@@ -235,7 +235,6 @@ const Index = () => {
     );
   };
   const handleAdd = () => {
-    alert("test");
     const newData: IRow = {
       key: data.length + 1,
       x: 0,
