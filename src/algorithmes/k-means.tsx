@@ -13,6 +13,7 @@ const KmeansAlgorithme = (classesNumber: number, dataSet: Idataset[]) => {
     };
     return classItem;
   });
+
   let oldClasses = saveClassesItems(classes);
   let repeat: boolean = true;
   let classesHistory: any = [];

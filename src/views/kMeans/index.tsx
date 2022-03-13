@@ -59,6 +59,7 @@ const Index = () => {
     getCheckboxProps: (record: any) => ({
       disabled: record.name === "Disabled User",
       // Column configuration not to be checked
+
       name: record.name,
     }),
   };
@@ -278,6 +279,7 @@ const Index = () => {
     setResultValue(resultContent);
     console.log(resultContent);
   };
+
   return (
     <>
       <h3
@@ -291,7 +293,7 @@ const Index = () => {
           fontSize: 24,
         }}
       >
-        Développer par Oucif Abdelkarim et Belaabed Miloud et Belouaar Maissa
+        Développer par Oucif Abdelkarim et Belaabed Miloud 
       </h3>
       <div className="main-container">
         <Row gutter={24}>
